@@ -97,20 +97,7 @@ To complete this tutorial, you will need the following:
 
     Or you can use the following curl command:
     ```
-    curl --request POST\
-        --url 'http://localhost:8080/micro/review' \
-        --header 'accept: application/json' \
-        --header 'content-type: application/json' \
-        --data @- <<'EOF'
-        {
-         "comment": "VIP Customer",
-         "accountId": 14402,
-         "accountType": "Checking",
-         "ownerEmail": "gangchen@us.ibm.com",
-         "ownerName": "Gang Chen",
-         "accountOpenDate": "01/31/2017"
-        }' 
-        EOF
+    curl --request POST      --url 'http://localhost:8080/micro/account'       --header 'accept: application/json'       --header 'content-type: application/json'       --data  '{      "comment": "VIP Customer",      "accountId": 14402,      "accountType": "Checking",      "ownerEmail": "gangchen@us.ibm.com",      "ownerName": "Gang Chen",      "accountOpenDate": "01/31/2017"     }'
     ```
 To query the account that you just inserted use url http://localhost:8080/micro/account?accountId=14402
 
